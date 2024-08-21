@@ -22,8 +22,7 @@ export default function CommentCreateForm({
   const [formState, action] = useFormState(
     actions.createComment.bind(null, { postId, parentId }),
     { errors: {} }
-  );
-
+  )
   useEffect(() => {
     if (formState.success) {
       ref.current?.reset();
