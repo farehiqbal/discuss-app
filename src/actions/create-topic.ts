@@ -3,7 +3,6 @@
 import { create } from 'domain';
 import {z} from 'zod';
 import {auth } from '@/auth';
-import type { Topic } from '@prisma/client';
 import { redirect } from 'next/navigation';
 import { db } from '@/db';
 import paths from '@/paths';
@@ -47,7 +46,7 @@ export async function createTopic(
             },
         };
     }
-    let topic: Topic;
+    let topic;
     try {
         topic = await db.topic.create({
             data: {
