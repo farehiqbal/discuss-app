@@ -1,6 +1,5 @@
 'use server'
 
-import type { Post } from '@prisma/client';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { z }from 'zod';
@@ -59,7 +58,7 @@ export async function createPost(slug:string, formState: CreatePostFormState, fo
         };
     }
 
-    let post: Post;
+    let post;
     try {   
         post = await db.post.create({
             data: {
