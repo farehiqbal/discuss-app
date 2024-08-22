@@ -11,7 +11,8 @@ export default function FormButton({children}: FormButtonProps) {
 
     const {pending } = useFormStatus();
 
-    return <Button type='submit' isLoading={pending} >
+    return <Button type='submit' isLoading={pending} color="secondary" variant="flat" className="mb-2">
         {children}
+    
     </Button>
 }

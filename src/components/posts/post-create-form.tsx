@@ -21,16 +21,16 @@ export default async function PostCreateForm({slug}: PostCreateFormProps) {
     );
 
     return (
-        <Popover placement='left' >
+        <Popover placement='left'>
             <PopoverTrigger>
-                <Button color="primary">
+                <Button color="secondary" variant="bordered">
                     Create a Post
                 </Button>
             </PopoverTrigger>
             <PopoverContent>
                 <form action={action}>
                     <div className="flex flex-col gap-4 p-4 w-80">
-                        <h3 className="text-lg">Cretae a Post</h3>
+                        <h3 className="text-lg">Create a Post</h3>
                         <Input 
                             name="title"
                             placeholder="Title"

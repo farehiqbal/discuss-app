@@ -38,7 +38,7 @@ export default function CommentCreateForm({
       <div className="space-y-2 px-1">
         <Textarea
           name="content"
-          label="Reply"
+          // label="Reply"
           labelPlacement="inside"
           placeholder="Enter your comment"
           isInvalid={!!formState.errors.content}
@@ -51,7 +51,7 @@ export default function CommentCreateForm({
           </div>
         ) : null}
 
-        <FormButton>Create Comment</FormButton>
+        <FormButton>Comment</FormButton>
       </div>
     </form>
   );

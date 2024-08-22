@@ -19,7 +19,7 @@ export default function TopicCreateForm() {
     return (
         <Popover placement='left'>
             <PopoverTrigger>
-                <Button color='primary'>Create a Topic</Button>
+                <Button color='secondary'>Create a Topic</Button>
             </PopoverTrigger>
 
             <PopoverContent>
@@ -29,6 +29,7 @@ export default function TopicCreateForm() {
                         <Input name='name' label="Name" labelPlacement='outside' placeholder='Name' 
                             isInvalid={!!formState.errors.name}
                             errorMessage={formState.errors.name?.join(', ')}
+                            isRequired
                         />
                         <Textarea 
                             name='description'
@@ -37,13 +38,14 @@ export default function TopicCreateForm() {
                             placeholder='Descibe your topic'
                             isInvalid={!!formState.errors.description}
                             errorMessage={formState.errors.description?.join(', ')} 
+                            isRequired
                         />
 
                         {formState.errors._form? (
                             <div className='rounded p-2 bg-red-200 border border-red-400'>
                                 {formState.errors._form.join(', ')}
                             </div>
-                        ) : null}
+                        ) : null}   
 
                         <FormButton>Create Topic</FormButton>
                     </div>

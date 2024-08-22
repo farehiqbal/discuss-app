@@ -12,9 +12,11 @@ export default function Home() {
         <PostList fetchData={fetchTopPosts}></PostList>
     </div>
     <div className="border shadow py-3 px-2">
-      <TopicCreateForm />
+      <div className="flex justify-center items-center">
+        <TopicCreateForm />
+      </div>
       <Divider className="my-2"></Divider>
-      <h3 className="text-lg">Topics</h3>
+      <h3 className="text-lg m-2">Topics</h3>
       <TopicList />
     </div>
 

@@ -1,31 +1,31 @@
 import Link from 'next/link';
 import { auth } from '@/auth';
 import * as actions from '@/actions';
+import { Suspense } from 'react';
 import {
     Navbar,
     NavbarBrand,
     NavbarContent,
     NavbarItem,
-    Input,
-    Button,
-    Avatar,
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
 }from '@nextui-org/react';
 import HeaderAuth from './header-auth';
+import SearchInput from './search-input';
 
 export default async function Header() {
     
     return (
-        <Navbar className='shadow mb-6'>
+        <Navbar isBordered className='mb-6'>
             <NavbarBrand>
-                <Link href='/' className='font-bold' >Dicuss</Link>
+                <Link href='/' className='font-bold text-inherit' >🗣️ Discuss</Link>
             </NavbarBrand>
 
-            <NavbarContent justify='center' >
-                <NavbarItem>
-                    <Input placeholder='Search' />
+            <NavbarContent justify="center" as="div" className="w-full">
+                <NavbarItem className="flex-grow">
+                    <Suspense>
+                        <div className="max-w-lg mx-auto w-full">
+                            <SearchInput />
+                        </div>
+                    </Suspense>
                 </NavbarItem>
             </NavbarContent>
 
