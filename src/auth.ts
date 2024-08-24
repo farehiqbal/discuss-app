@@ -41,5 +41,6 @@ export const {
       return token;
     },
   },
-  secret: NEXTAUTH_SECRET, // Optional but recommended for security
+  secret: NEXTAUTH_SECRET,
+  debug: true,
 });
