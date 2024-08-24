@@ -18,7 +18,7 @@ Before you begin, ensure you have met the following requirements:
 
 To get your project up and running, follow these steps:
 
-**Clone the Repository**
+## Clone the Repository
 
 Clone this repository to your local machine using the following command:
 
@@ -28,7 +28,7 @@ git clone https://github.com/farehiqbal/discuss-app.git
 cd discuss-app
 ```
 
-**Install Dependencies**
+## Install Dependencies
 
 Next, install the project dependencies:
 
@@ -36,9 +36,10 @@ Next, install the project dependencies:
 npm install
 ```
 
-**Set Up Environment Variables**
+## Set Up Environment Variables
 
-*** You will need to create a GitHub OAuth app to get the `GITHUB_ID` and `GITHUB_SECRET` values. ***
+ *** You will need to create a GitHub OAuth app to get the `GITHUB_ID` and `GITHUB_SECRET` values. ***
+
 - Go to [GitHub Developer Settings](
 
 - Click on "New OAuth App".
@@ -66,12 +67,12 @@ GITHUB_SECRET=YOUR_GITHUB_CLIENT_SECRET
 AUTH_SECRET=SomethingSecret
 ```
 
-** Run Migrations **
+## Run Migrations 
 ```bash
 npx prisma migrate dev
 ```
 
-** Start the Development Server **
+## Start the Development Server
 
 Finally, start the development server:
 
@@ -104,8 +105,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [NextUI](https://nextui.org/)
 - [NextAuth.js](https://next-auth.js.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-
-```
 
 
 
