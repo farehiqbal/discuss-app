@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Name
+
+A simple Reddit like app built with Next.js, TypeScript, Prisma & NextUI. Authntication is done with GitHub using NextAuth.js.
+
+![Discuss App](screenshots/discuss-app.png)
+
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- **Node.js** (v14 or later) installed on your machine.
+- **npm** (Node Package Manager) or **yarn** installed.
+- A code editor such as **Visual Studio Code**.
+- A GitHub account for setting up OAuth credentials.
 
 ## Getting Started
 
-First, run the development server:
+To get your project up and running, follow these steps:
+
+**Clone the Repository**
+
+Clone this repository to your local machine using the following command:
+
+```bash
+git clone https://github.com/farehiqbal/discuss-app.git
+
+cd discuss-app
+```
+
+**Install Dependencies**
+
+Next, install the project dependencies:
+
+```bash
+npm install
+```
+
+**Set Up Environment Variables**
+
+*** You will need to create a GitHub OAuth app to get the `GITHUB_ID` and `GITHUB_SECRET` values. ***
+- Go to [GitHub Developer Settings](
+
+- Click on "New OAuth App".
+- Fill in the form with the following details:
+  - Application name: Discuss App
+  - Homepage URL: http://localhost:3000
+  - Authorization callback URL: http://localhost:3000/api/auth/callback/github
+- Click on "Register application".
+- Copy the `Client ID` and `Client Secret` values.
+
+![Github App](screenshots/gtihub-app.png)
+
+
+Create a `.env.local` file in the root of the project and add the following environment variables:
+
+```bash
+DATABASE_URL="DATABASE_URL="file:./dev.db"
+
+```
+Then, create a .env.local file in the root of the project and add the following environment variables:
+
+```bash
+GITHUB_ID=YOUR_GITHUB_CLIENT_ID
+GITHUB_SECRET=YOUR_GITHUB_CLIENT_SECRET
+AUTH_SECRET=SomethingSecret
+```
+
+** Run Migrations **
+```bash
+npx prisma migrate dev
+```
+
+** Start the Development Server **
+
+Finally, start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the app running.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Please note that if you aren't able to do authentication with GitHub at this point, you may have made a mistake in setting up the environmental variables. Double-check the `Homepage URL` and `Authorization callback URL` values in your GitHub OAuth app settings.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Built With
 
-## Learn More
+- Next.js
+- TypeScript
+- Prisma
+- NextUI
+- NextAuth.js
+- SQLite
+- Tailwind CSS
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Acknowledgements
 
-## Deploy on Vercel
+- [Next.js](https://nextjs.org/)
+- [Prisma](https://www.prisma.io/)
+- [NextUI](https://nextui.org/)
+- [NextAuth.js](https://next-auth.js.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+
+
+
