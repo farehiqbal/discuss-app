@@ -5,7 +5,8 @@ import PostList from "@/components/posts/post-list"
 import { fetchTopPosts } from "@/db/queries/post"
 
 export default function Home() {
-  return <div className="grid grid-cols-4 gap-4 p-4">
+  return <div className="dark">
+  <div className="grid grid-cols-4 gap-4 p-4 dark:bg-black dark:text-white">
 
     <div className="col-span-3">
         <h1 className="text-xl m-2">Top Posts</h1>
@@ -20,5 +21,6 @@ export default function Home() {
       <TopicList />
     </div>
 
+  </div>
   </div>
 } 

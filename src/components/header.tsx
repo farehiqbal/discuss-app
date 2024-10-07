@@ -16,7 +16,7 @@ export default async function Header() {
     return (
         <Navbar isBordered className='mb-6'>
             <NavbarBrand>
-                <Link href='/' className='font-bold text-inherit' >🗣️ Discuss</Link>
+                <Link href='/' className='font-bold text-inherit text-2xl' >Discuss</Link>
             </NavbarBrand>
 
             <NavbarContent justify="center" as="div" className="w-full">
