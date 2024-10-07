@@ -9,11 +9,11 @@ export default function Home() {
   <div className="grid grid-cols-4 gap-4 p-4 dark:bg-black dark:text-white">
 
     <div className="col-span-3">
-        <h1 className="text-xl m-2">Top Posts</h1>
+        <h1 className="text-2xl m-2">Top Posts</h1>
         <PostList fetchData={fetchTopPosts}></PostList>
     </div>
-    <div className="border shadow py-3 px-2">
-      <div className="flex justify-center items-center">
+    <div className="border shadow py-3 px-2 rounded-lg">
+      <div className="flex justify-center items-center m-2">
         <TopicCreateForm />
       </div>
       <Divider className="my-2"></Divider>
