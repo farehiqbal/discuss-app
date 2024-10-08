@@ -8,21 +8,24 @@ interface TopicShowPageProps {
     }
 }
 
-export default function TopicShowPage( {params}: TopicShowPageProps){
-
+export default function TopicShowPage({ params }: TopicShowPageProps) {
     const { slug } = params;
 
-    return <div className="grid grid-cols-4 gap-4 p-4">
-        <div className="col-span-3">
-            <h1 className="text-2xl font-bold mb-2">
-                {slug}
-            </h1>
-            <PostList fetchData={ () => fetchPostsByTopicSlug(slug) }></PostList>
-        </div>
+    return (
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 p-4">
+            {/* Main Content - Posts */}
+            <div className="lg:col-span-3">
+                <h1 className="text-xl lg:text-2xl font-bold mb-4">
+                    {slug}
+                </h1>
+                {/* Posts List */}
+                <PostList fetchData={() => fetchPostsByTopicSlug(slug)} />
+            </div>
 
-        <div>
-            <PostCreateForm slug={slug} />
+            {/* Sidebar - Post Create Form */}
+            <div className="lg:col-span-1 order-first lg:order-none">
+                <PostCreateForm slug={slug} />
+            </div>
         </div>
-
-    </div>
+    );
 }
