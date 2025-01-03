@@ -13,6 +13,7 @@ export default function SearchInput() {
                 name="term" 
                 size="sm" 
                 color="secondary" 
+                fullWidth
                 placeholder=" Search for something" 
                 defaultValue={searchParams.get('term') || ""}
                 type="search"
