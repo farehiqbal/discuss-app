@@ -9,7 +9,7 @@ interface PostCreateFormProps {
     slug: string;
 }
 
-export default async function PostCreateForm({ slug }: PostCreateFormProps) {
+export default function PostCreateForm({ slug }: PostCreateFormProps) {
 
     const [formState, action] = useFormState(
         actions.createPost.bind(null, slug),
